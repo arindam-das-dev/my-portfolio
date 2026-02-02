@@ -139,3 +139,37 @@ function animateSkills() {
 }
 
 window.addEventListener('scroll', animateSkills);
+
+
+// Prevent right‑click context menu
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+      alert("Copying is disabled on this site!");
+    });
+
+    // Prevent keyboard shortcuts like Ctrl+C / ⌘+C
+    document.addEventListener("keydown", function(event) {
+      if ((event.ctrlKey && event.key === "c") || 
+          (event.metaKey && event.key === "c")) {
+        event.preventDefault();
+        alert("Copy action blocked!");
+      }
+    });
+
+    // Prevent text selection (blocks double‑click selection too)
+    document.addEventListener("selectstart", function(event) {
+      event.preventDefault();
+      alert("Text selection is disabled!");
+    });
+
+    // Show a message on any mouse click
+    document.addEventListener("click", function() {
+      alert("Mouse click detected!");
+    });
+
+    // Prevent double‑click behavior
+    document.addEventListener("dblclick", function(event) {
+      event.preventDefault();
+      alert("Double‑click selection is disabled!");
+    });
+
