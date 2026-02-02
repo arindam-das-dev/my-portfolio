@@ -184,7 +184,7 @@ header .container {
 .hero-image img {
     max-width: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    clip-path: circle(44% at 50% 50%);
+    clip-path: circle(42% at 49% 40%);
 }
 
 /* About Section */
